@@ -8,12 +8,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{355ED52F-8E26-47CD-9DD4-556FB2EE332F}</ProjectGuid>
+    <ProjectGuid>{FD7C2842-F729-4E50-A52E-666FFF08A883}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JX3Pet</RootNamespace>
-    <AssemblyName>JX3Pet</AssemblyName>
+    <RootNamespace>EarlySummer.Application</RootNamespace>
+    <AssemblyName>EarlySummer.Application</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -101,6 +101,13 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Settings\appSettings.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Settings\connectionStrings.config" />
+    <Content Include="Views\BusinessModules\PetModules\Pet\Index.cshtml" />
+    <Content Include="Views\BusinessModules\HomeModules\Home\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -110,8 +117,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EarlySummer.BusinessModules\EarlySummer.BusinessModules.csproj">
+      <Project>{9f769309-3802-484f-9b91-87c5029adbe2}</Project>
+      <Name>EarlySummer.BusinessModules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EarlySummer.Platform\EarlySummer.Platform.csproj">
+      <Project>{740a3a88-d96a-4e53-9d2f-718f10022c80}</Project>
+      <Name>EarlySummer.Platform</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -126,9 +141,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>16254</DevelopmentServerPort>
+          <DevelopmentServerPort>45336</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:16254/</IISUrl>
+          <IISUrl>http://localhost:45336/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

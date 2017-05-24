@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过下列特性集
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("JX3Pet")]
+[assembly: AssemblyTitle("EarlySummer.Application")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("JX3Pet")]
+[assembly: AssemblyProduct("EarlySummer.Application")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于 typelib 的 ID
-[assembly: Guid("355ed52f-8e26-47cd-9dd4-556fb2ee332f")]
+[assembly: Guid("fd7c2842-f729-4e50-a52e-666fff08a883")]
 
 // 程序集的版本信息由下列四个值组成:
 //

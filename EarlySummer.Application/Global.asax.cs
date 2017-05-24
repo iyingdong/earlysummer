@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace JX3Pet
+namespace EarlySummer.Application
 {
     public class MvcApplication : System.Web.HttpApplication
     {
@@ -13,6 +13,9 @@ namespace JX3Pet
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            ViewEngines.Engines.Clear();
+            ViewEngines.Engines.Add(new Platform.Module.SimpleViewEngine());
         }
     }
 }
