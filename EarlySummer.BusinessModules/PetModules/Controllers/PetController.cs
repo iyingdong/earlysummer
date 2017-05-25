@@ -6,10 +6,10 @@ namespace EarlySummer.BusinessModules.PetModules.Controllers
 {
     public class PetController: ModuleController
     {
-        IPetService service = new PetService();
-        public PetController()
+        IPetService service;
+        public PetController(IPetService service)
         {
-
+            this.service = service;
         }
 
 

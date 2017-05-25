@@ -1,0 +1,54 @@
+﻿@model IEnumerable<EarlySummer.BusinessModules.DataAccess.Work>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("新建", "Edit")
+
+    <input id="count" type="button" value="统计" class="btn btn-default" />
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MondayTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreationTime)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MondayTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreationTime)
+            </td>
+            <td>
+                @Html.ActionLink("编辑", "Edit", new { id=item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+<script>
+    $(function () {
+        $("#count").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "/Work/Count",
+                dataType: "json",
+                success: function (result) {
+                    alert(result);
+                }
+            })
+        })
+    })
+</script>
