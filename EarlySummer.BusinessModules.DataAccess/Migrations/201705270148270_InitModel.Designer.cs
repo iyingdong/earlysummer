@@ -7,13 +7,13 @@ namespace EarlySummer.BusinessModules.DataAccess.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitModel1 : IMigrationMetadata
+    public sealed partial class InitModel : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitModel1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitModel));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705250951388_InitModel1"; }
+            get { return "201705270148270_InitModel"; }
         }
         
         string IMigrationMetadata.Source

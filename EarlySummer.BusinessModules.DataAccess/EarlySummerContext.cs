@@ -1,8 +1,7 @@
 ﻿namespace EarlySummer.BusinessModules.DataAccess
 {
-    using System;
+    using EarlySummer.BusinessModules.DataAccess.Entity;
     using System.Data.Entity;
-    using System.Linq;
 
     public class EarlySummerContext : DbContext
     {

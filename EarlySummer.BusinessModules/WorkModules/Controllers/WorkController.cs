@@ -1,11 +1,7 @@
-﻿using EarlySummer.BusinessModules.DataAccess;
+﻿using EarlySummer.BusinessModules.DataAccess.Entity;
 using EarlySummer.BusinessModules.WorkModules.Domains;
 using EarlySummer.Platform.Module;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace EarlySummer.BusinessModules.WorkModules.Controllers
@@ -46,9 +42,9 @@ namespace EarlySummer.BusinessModules.WorkModules.Controllers
         }
 
         [HttpPost]
-        public ActionResult Count()
+        public ActionResult Count(Guid Id)
         {
-            string result = service.Count();
+            string result = service.Count(Id);
             return Json(result);
         }
     }

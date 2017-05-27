@@ -58,28 +58,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EarlySummerContext.cs" />
-    <Compile Include="Migrations\201705250635084_InitModel.cs" />
-    <Compile Include="Migrations\201705250635084_InitModel.Designer.cs">
-      <DependentUpon>201705250635084_InitModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705250951388_InitModel1.cs" />
-    <Compile Include="Migrations\201705250951388_InitModel1.Designer.cs">
-      <DependentUpon>201705250951388_InitModel1.cs</DependentUpon>
+    <Compile Include="Entity\Work.cs" />
+    <Compile Include="Migrations\201705270148270_InitModel.cs" />
+    <Compile Include="Migrations\201705270148270_InitModel.Designer.cs">
+      <DependentUpon>201705270148270_InitModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Work.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705250635084_InitModel.resx">
-      <DependentUpon>201705250635084_InitModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705250951388_InitModel1.resx">
-      <DependentUpon>201705250951388_InitModel1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705270148270_InitModel.resx">
+      <DependentUpon>201705270148270_InitModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

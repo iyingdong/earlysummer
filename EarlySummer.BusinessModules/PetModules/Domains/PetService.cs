@@ -9,6 +9,15 @@ namespace EarlySummer.BusinessModules.PetModules.Domains
 {
     public class PetService : IPetService
     {
+        /// <summary>
+        /// 生成宠物列表.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns></returns>
+        /// <remarks>
+        ///     <para>创建：yuyd</para>
+        ///     <para>日期：2017-5-27 14:26</para>
+        /// </remarks>
         public List<PetModel> GetPetList(string id)
         {
             var data = GetPetInfo(id);
@@ -47,10 +56,13 @@ namespace EarlySummer.BusinessModules.PetModules.Domains
         /// <summary>
         /// 获取宠物CD信息.
         /// </summary>
-        /// <returns>System.String.</returns>
+        /// <param name="id">The identifier.</param>
+        /// <returns>
+        /// System.String.
+        /// </returns>
         /// <remarks>
-        ///   	<para>创建：yuyd</para>
-        ///   	<para>日期：2017-05-18</para>
+        /// <para>创建：yuyd</para>
+        /// <para>日期：2017-05-18</para>
         /// </remarks>
         private string GetPetInfo(string id)
         {

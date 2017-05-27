@@ -16,18 +16,29 @@ textarea {
     max-width: 280px;
 }
 
-.table tr th, .table tr td {
-    text-align: center;
-}
-
 .navbar-inverse {
-    background-color:coral;
+    background-color:#66cc99;
     border-color:antiquewhite;
 }
+.navbar-inverse .navbar-toggle {
+    border-color: #66cc99
+}
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+    .navbar-inverse .navbar-nav > li > a {
+        color:white;
+    }
+    .navbar-inverse .navbar-toggle:hover {
+        background-color: #66cc99
+    }
+    .navbar-inverse .navbar-collapse {
+        border-color:white;
+    }
+    .table tr th, .table tr td {
+        text-align: center;
+    }
 
-    .navbar-inverse .navbar-toggle {
-        border-color: coral
-    }
-    .navbar-inverse .navbar-brand {
-        color: white;
-    }
+.table .incd {
+    background-color: #87CEEB;
+}

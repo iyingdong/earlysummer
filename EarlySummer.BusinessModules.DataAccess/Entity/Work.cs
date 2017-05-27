@@ -5,16 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EarlySummer.BusinessModules.DataAccess
+namespace EarlySummer.BusinessModules.DataAccess.Entity
 {
     public class Work
     {
-        public Guid Id { get; set; }
+        [Key]
+        public Guid WorkId { get; set; }
 
-        [Display(Name = "周一时间")]
-        public DateTime MondayTime { get; set; }
+        [Display(Name ="名称")]
+        [StringLength(20)]
+        public string WorkName { get; set; }
 
-        [Display(Name = "下班时间")]
+        [Display(Name = "内容")]
         public string Content { get; set; }
 
         [Display(Name = "创建时间")]

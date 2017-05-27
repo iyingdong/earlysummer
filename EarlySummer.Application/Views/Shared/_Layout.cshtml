@@ -20,7 +20,10 @@
                 @Html.ActionLink("首页", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav"></ul>
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("统计", "Index", "Work")</li>
+                    <li>@Html.ActionLink("宠物", "Index", "Pet")</li>
+                </ul>
             </div>
         </div>
     </div>

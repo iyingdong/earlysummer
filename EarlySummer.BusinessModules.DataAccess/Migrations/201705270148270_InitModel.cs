@@ -11,13 +11,12 @@ namespace EarlySummer.BusinessModules.DataAccess.Migrations
                 "dbo.Works",
                 c => new
                     {
-                        Id = c.Guid(nullable: false),
-                        Week = c.String(unicode: false),
-                        StartTime = c.DateTime(nullable: false, precision: 0),
-                        StopTime = c.DateTime(nullable: false, precision: 0),
+                        WorkId = c.Guid(nullable: false),
+                        WorkName = c.String(maxLength: 20, storeType: "nvarchar"),
+                        Content = c.String(unicode: false),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.WorkId);
             
         }
         

@@ -1,54 +1,52 @@
-﻿@model IEnumerable<EarlySummer.BusinessModules.DataAccess.Work>
+﻿@model IEnumerable<EarlySummer.BusinessModules.DataAccess.Entity.Work>
 
 @{
-    ViewBag.Title = "List";
+    ViewBag.Title = "统计";
 }
 
-<h2>List</h2>
+<h2>统计</h2>
 
 <p>
     @Html.ActionLink("新建", "Edit")
-
-    <input id="count" type="button" value="统计" class="btn btn-default" />
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.MondayTime)
+            @Html.DisplayNameFor(model => model.WorkName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CreationTime)
         </th>
-        <th></th>
+        <th>操作</th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.MondayTime)
+                @Html.DisplayFor(modelItem => item.WorkName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CreationTime)
+                @item.CreationTime.ToString("yyyy-MM-dd HH:mm:ss")
             </td>
             <td>
-                @Html.ActionLink("编辑", "Edit", new { id=item.Id })
+                @Html.ActionLink("编辑", "Edit", new { id=item.WorkId }) |
+                <a href="javascript:void(0)" onclick="Count('@item.WorkId')">统计</a>
             </td>
         </tr>
     }
 
 </table>
 <script>
-    $(function () {
-        $("#count").click(function () {
-            $.ajax({
-                type: "POST",
-                url: "/Work/Count",
-                dataType: "json",
-                success: function (result) {
-                    alert(result);
-                }
-            })
-        })
-    })
+    function Count(workId) {
+        $.ajax({
+            url: "/Work/Count",
+            type: "POST",
+            data: { id: workId },
+            dataType: "json",
+            success: function (result) {
+                alert(result);
+            }
+        });
+    }
 </script>
